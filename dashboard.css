@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0d47a1 0%, #1976d2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.header {
+    background: linear-gradient(135deg, #0000ff 0%, #0d47a1 100%);
+    color: white;
+    padding: 30px 40px;
+}
+
+.header h1 {
+    font-size: 2em;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.header p {
+    font-size: 1.1em;
+    opacity: 0.95;
+}
+
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 30px 40px;
+    background: #f8f9fa;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #0d47a1;
+}
+
+.card-label {
+    font-size: 0.85em;
+    color: #666;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.card-value {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #0d47a1;
+}
+
+.card.highlight {
+    border-left-color: #00c853;
+}
+
+.card.highlight .card-value {
+    color: #00c853;
+}
+
+.content {
+    padding: 20px 40px 40px;
+}
+
+.section-title {
+    font-size: 1.5em;
+    color: #0d47a1;
+    margin: 30px 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #0d47a1;
+    font-weight: 600;
+}
+
+.table-container {
+    overflow-x: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85em;
+    background: white;
+}
+
+thead {
+    background: #0d47a1;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+th {
+    padding: 12px 10px;
+    text-align: left;
+    font-weight: 600;
+    white-space: nowrap;
+    font-size: 0.85em;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.total-row {
+    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.total-row td {
+    padding: 15px 10px;
+    border: none;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+.badge-mei {
+    background: #e3f2fd;
+    color: #0d47a1;
+}
+
+.badge-adm {
+    background: #f3e5f5;
+    color: #6a1b9a;
+}
+
+.badge-ativo {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.highlight-cell {
+    background: #fff9c4;
+    font-weight: bold;
+}
+
+.btn-container {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.btn {
+    background: linear-gradient(135deg, #0d47a1 0%, #1976d2 100%);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1em;
+    transition: all 0.3s;
+    box-shadow: 0 4px 12px rgba(13, 71, 161, 0.3);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(13, 71, 161, 0.4);
+}
+
+.footer {
+    padding: 20px 40px;
+    text-align: center;
+    background: #f8f9fa;
+    border-top: 2px solid #0d47a1;
+    font-weight: bold;
+    color: #0d47a1;
+}
+
+.summary-final {
+    background: #e3f2fd;
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 30px;
+}
+
+.summary-final h3 {
+    color: #0d47a1;
+    margin-bottom: 15px;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.summary-item strong {
+    color: #666;
+}
+
+.summary-value {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.summary-value.blue {
+    color: #0d47a1;
+}
+
+.summary-value.green {
+    color: #00c853;
+}
+
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    .btn-container {
+        display: none;
+    }
+}
